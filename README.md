@@ -1,2 +1,6 @@
-# ben-pelletier
-source code for my profile site
+# ben-pelletier.com
+Single page profile site developed with
+
+- Ink
+- Jade
+- ColdFusion
