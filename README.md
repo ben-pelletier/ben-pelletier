@@ -9,7 +9,6 @@ Static single page website leveraging html and css preprocessors.
 - jQuery
 - ColdFusion
 
-
 ## Build Setup
 
 **Requires Node.js 6+**
