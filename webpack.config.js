@@ -21,6 +21,10 @@ module.exports = {
         loader: ExtractTextPlugin.extract('css-loader?minimize!stylus-loader?paths=node_modules/bootstrap-stylus/stylus/')
       },
       {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('css-loader?minimize!sass-loader')
+      },
+      {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader?minimize!')
       },
