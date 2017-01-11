@@ -1,0 +1,40 @@
+{
+  "name": "ben-pelletier",
+  "version": "1.2.0",
+  "description": "Profile website",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && webpack --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ben-pelletier/ben-pelletier.git"
+  },
+  "author": "Ben Pelletier",
+  "bugs": {
+    "url": "https://github.com/ben-pelletier/ben-pelletier/issues"
+  },
+  "homepage": "https://github.com/ben-pelletier/ben-pelletier#readme",
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "font-awesome": "^4.7.0",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.26.0",
+    "jquery": "^3.1.1",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-beta6",
+    "pug-html-loader": "^1.0.10",
+    "pug-loader": "^2.3.0",
+    "rimraf": "^2.5.4",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.4.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

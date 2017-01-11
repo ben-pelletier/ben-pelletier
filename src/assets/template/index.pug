@@ -1,0 +1,240 @@
+doctype html
+html(lang='en')
+  head
+    title Ben Pelletier
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+  body
+    header
+      // navigation
+      .row
+        ul#nav.navigation.text-align-right
+          li(anchor-to='about-me') About Me
+          li(anchor-to='clients') Clients
+          li(anchor-to='my-work') My Work
+          li(anchor-to='expertise') Expertise
+          li(anchor-to='testimonials') Testimonials
+          li(anchor-to='contact-me') Contact Me
+          li(onclick="location.href='https://github.com/ben-pelletier'")
+            i.fa.fa-github.fa-3(style='font-size:16px;')
+      // top content
+      .section.top(menu-id='top')
+        .container
+          .row
+            .two-thirds.column.value
+              h4.top-heading
+                | I'm Ben
+                p.top-description
+                  | The only option you have when you need magical space age web design and software engineering from a developer with determination and charisma!
+            .one-third.column.value
+              img.u-max-full-width.top-image(src='../img/me.png')
+          .row
+            span.anchored(anchor-to='about-me')
+              i.fa.fa-angle-double-down.fa-3x.do-pulse.animated.text-align-center
+    // about me
+    #about-me.section.sub-section.about-me
+      .container.fadeInBlock(menu-id='about-me')
+        .row
+          h3.section-heading About Me
+          h4.section-sub-heading If you dont already know!
+          p.about-me-description
+            | I'm a software engineer born and raised in the DC metro area. Being a life long learner, I've been dabbling with programming of all sorts since I was just a child and got my hands on my first computer. I've finally found my calling in the web development field allowing me to merge my life long love for art and design with the fun of coding. Those who know me can all verify that I'm extremely passionate about my career and my field. I take every opportunity I can to share my passion with others through conversation, teaching and mentoring.
+          p.about-me-description
+            | I've had an extremely versatile career thus far working in a variety of settings including small businesses, large corporate as well as federal government. Having held positions as both a team member and a team leader. I am always seeking opportunity to improve and expand my skillset and experience through any means possible.
+        .row
+          a.button.button-primary(href='ben_pelletier_resume.pdf') PDF Resume
+          a.button.button-primary.anchored(anchor-to='contact-me') Contact Me
+        .break
+        .row
+          span.anchored(anchor-to='clients')
+            i.fa.fa-angle-double-down.fa-3x.faa-burst.animated.text-align-center
+    // clients
+    #clients.section.sub-section.clients
+      .container.fadeInBlock(menu-id='clients')
+        h3.section-heading Clients
+        h4.section-sub-heading Some places that gave me a "job".
+        .break
+        .row
+          .one-third.column.value
+            .column.category
+              a(href='http://www.nasa.gov')
+                img.client-image(src='../img/clients/nasa.png')
+          .one-third.column.value
+            .column.category
+              a(href='http://www.huntington.com')
+                img.client-image(src='../img/clients/huntington.png')
+          .one-third.column.value
+            .column.category
+              a(href='http://www.issi-software.com')
+                img.client-image(src='../img/clients/issi.png')
+        .break
+        .row
+          .one-half.column.value
+            .column.category
+              a(href='http://www.castlelasertag.com/')
+                img.client-image(src='../img/clients/castle.png')
+          .one-half.column.value
+            .column.category
+              a(href='https://www.adnet-sys.com/')
+                img.client-image(src='../img/clients/ant.png')
+        .break
+        .row
+          span.anchored(anchor-to='my-work')
+            i.fa.fa-angle-double-down.fa-3x.faa-burst.animated.text-align-center
+    // My Work
+    #my-work.section.sub-section.my-work
+      .container.fadeInBlock(menu-id='my-work')
+        // project 1
+        .row
+          h3.section-heading Projects
+          h4.section-sub-heading A hand full of my recent and ongoing projects.
+        .break
+        .row
+          .one-half.column.value
+            .tv
+              video(poster='http://ben-pelletier.com/images/tvapp.jpg', autoplay='', muted='', loop='')
+                source(src='http://ben-pelletier.com/images/tvapp.webm', type='video/webm')
+                source#mp4Source(src='http://ben-pelletier.com/images/tvapp.mp4', type='video/mp4')
+          .one-half.column.value
+            h3 Code 600 TV
+            p
+              | The Sciences and Exploration Directorate television application featured in several buildings at NASA Goddard Space Flight Center.
+            p
+              b Vue.js, Node.js, Bootstrap,
+        .break
+        .row
+          .one-half.column.value
+            img.u-max-full-width(src='../img/projects/nasa_mac.png')
+          .one-half.column.value
+            h3 Science @ Goddard
+            p
+              | The Sciences and Exploration Directorate website for NASA Goddard Space Flight Center.
+            p
+              b ColdFusion, Fusebox, REST, Node.js, Vue.js, jQuery, Bootstrap, HTML/CSS
+        .break
+        // project 2
+        .row
+          .one-half.column.value
+            img.u-max-full-width(src='../img/projects/ndrc_mac.png')
+          .one-half.column.value
+            h3 NDRC-9
+            p The NASA direct readout conference registration and information web page.
+            p
+              b ColdFusion, ORM, BootStrap, jQuery, HTML/CSS
+        .break
+        // project 3
+        .row
+          .one-half.column.value
+            img.u-max-full-width(src='../img/projects/itpo_mac.png')
+          .one-half.column.value
+            h3 NASA Goddard Optimus Prime Spinoff
+            p The NASA OPTIMUS PRIME Spinoff Video Contest website.
+            p
+              b PHP, MySQL, REST, jQuery, HTML/CSS
+        .break
+        // project 3
+        .row
+          .one-half.column.value
+            img.u-max-full-width(src='../img/projects/issi-flyer.png')
+          .one-half.column.value
+            h3 ISSI Flyers
+            p Desgined flyers for various events including local career fairs.
+            p
+              b Photoshop, Indesign
+        .break
+        .row
+          span.anchored(anchor-to='expertise')
+            i.fa.fa-angle-double-down.fa-3x.faa-burst.animated.text-align-center
+    #expertise.section.sub-section.expertise
+      .container.fadeInBlock(menu-id='expertise')
+        h3.section-heading Expertise
+        h4.section-sub-heading Some specialties of mine at a glance
+        .break
+        .row
+          .one-third.column.value
+            i.fa.fa-file-code-o.fa-6x
+            br
+            h4.expertise-head Server-Side
+            h5.expertise-sub-head Node.js, ColdFusion, PHP and familiarity with many other server side languages
+          .one-third.column.value
+            i.fa.fa-code.fa-6x
+            br
+            h4.expertise-head Client-Side
+            h5.expertise-sub-head
+              | JavaScript, Vue.js, Angular, BackboneJS, jQuery and countless other JavaScript Libraries/Frameworks
+          .one-third.column.value
+            i.fa.fa-paint-brush.fa-6x
+            br
+            h4.expertise-head Design
+            h5.expertise-sub-head HTML, CSS, SASS, LESS, BootStrap, Photoshop, InDesign, Sketch
+        .break
+        h4.section-sub-heading
+          | You can check out some of my work on
+          b(style='cursor:pointer;', onclick="location.href='https://github.com/ben-pelletier'")
+            | GitHub
+            i.fa.fa-github.fa-3(style='font-size:16px;')
+        .break
+        .row
+          span.anchored(anchor-to='testimonials')
+            i.fa.fa-angle-double-down.fa-3x.faa-burst.animated.text-align-center
+    #testimonials.section.sub-section.testimonials
+      .container.fadeInBlock(menu-id='testimonials')
+        h3.section-heading Testimonials
+        .break
+        .row
+          .one-half.column.value
+            i.fa.fa-quote-right.fa-3x
+            br
+            p
+              | Ben is the absolute greatest dude in the world. I wouldn't even bother looking around for someone cooler than him.
+            p
+            p.section-sub-heading - Ben Pelletier
+          .one-half.column.value
+            i.fa.fa-quote-right.fa-3x
+            br
+            p
+              | Ben is the absolute greatest dude in the world. I wouldn't even bother looking around for someone cooler than him.
+            p
+            p.section-sub-heading - Ben Pelletier
+        .break
+        .row
+          span.anchored(anchor-to='contact-me')
+            i.fa.fa-angle-double-down.fa-3x.faa-burst.animated.text-align-center
+    #contact-me.section.sub-section.contact-me
+      .container.fadeInBlock(menu-id='contact-me')
+        h3.section-heading Contact Me
+        .break
+        .row
+          .one-third.column.value
+            .column.category
+              img.me-img(src='../img/me2.png')
+              p
+                i.fa.fa-mobile
+                |  (410)-292-1993
+                br
+                i.fa.fa-envelope
+                |  ben.epelletier@gmail.com
+          .two-thirds.column.value
+            .column.category
+              form
+                #alertmsg.row.hidden
+                  #alertmsgContent.twelve.columns
+                .row
+                  .four.columns
+                    input#name.u-full-width(name='name', type='text', placeholder='Name')
+                  .four.columns
+                    input#email.u-full-width(name='email', type='text', placeholder='Email')
+                  .four.columns
+                    input#phone.u-full-width(name='phone', type='text', placeholder='Phone')
+                br
+                .row
+                  .twelve.columns
+                    textarea#message.u-full-width.txtarea(name='message', placeholder='Message')
+                input#contactMeButt(type='button', value='Send Message')
+    footer
+      #footer.section.sub-section.footer
+        .container
+          p
+            i.fa.fa-copyright
+            |  Ben Pelletier 2015
