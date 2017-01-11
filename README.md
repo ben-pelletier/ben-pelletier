@@ -1,11 +1,14 @@
 # ben-pelletier.com
-Single page profile site developed with
+Static single page website leveraging html and css preprocessors.
 
-- Skeleton css
-- Stylus
-- Pug
-- Webpack
+**Built With**
+- Webpack ( module build system )
+- Pug ( html preprocessor )
+- Stylus ( css preprocessor )
+- Skeleton CSS
+- jQuery
 - ColdFusion
+
 
 ## Build Setup
 
