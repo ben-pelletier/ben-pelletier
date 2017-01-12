@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack')
-const buildPath = path.join(__dirname, 'dist/assets');
+
 module.exports = {
   entry: './src/index.js',
   output: {
