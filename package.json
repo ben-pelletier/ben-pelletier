@@ -4,7 +4,8 @@
   "description": "Profile website",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && webpack --progress"
+    "build": "rimraf dist && webpack --progress",
+    "dev": "node app.js"
   },
   "repository": {
     "type": "git",
