@@ -1,6 +1,6 @@
 // jquery imported in webpack.config.js
 var portfolio = {
-	menu : function(){
+	menu: function(){
 		// assign click event to menu items
 		$("li, .anchored").click(function (){
 			var anchor = $( this ).attr('anchor-to');
@@ -9,10 +9,10 @@ var portfolio = {
 			}, 1000);
 		});
 	},
-	scrolling : function(){
+	scrolling: function(){
 		var distance = $('#about-me').offset().top,
-			$window = $(window),
-			menu = 0;
+			  $window = $(window),
+        menu = 0;
 		//detect window scroll
 		$(window).scroll(function(event){
 			if ( $window.scrollTop() >= distance ) {
@@ -31,42 +31,47 @@ var portfolio = {
 				}
 			}
 			// fade in sections on scroll
-		    $('.fadeInBlock').each( function(){
-	            var top_of_object = $(this).position().top + 150;
-                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-	            var bottom_of_window = $(window).scrollTop() + $(window).height();
+	    $('.fadeInBlock').each( function(){
+        var top_of_object = $(this).position().top + 150;
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
 				// Adjust the "200" to either have a delay or that the content starts fading a bit before you reach it
-	            bottom_of_window = bottom_of_window;
-	            if( bottom_of_window > top_of_object ){
-		            if( $(this).css("opacity") != '1'){
-		                $(this).animate({'opacity':'1'},1500);
-		            }
-		            $('li[anchor-to]').css("color","#878787");
-		            $('li[anchor-to]').css("font-weight","normal");
-		            $('li[anchor-to="'+$(this).attr("menu-id")+'"]').css("color","black");
-		            $('li[anchor-to="'+$(this).attr("menu-id")+'"]').css("font-weight","bold");
-	            }
-                if( $(window).scrollTop() < 40 ){
-                	$('li[anchor-to]').css("color","white");
-					$('li[anchor-to]').css("font-weight","normal");
-
-                }
-	        });
+        bottom_of_window = bottom_of_window;
+        if( bottom_of_window > top_of_object ){
+          if( $(this).css("opacity") != '1'){
+            $(this).animate({'opacity':'1'},1500);
+          }
+          $('li[anchor-to]').css("color","#878787");
+          $('li[anchor-to]').css("font-weight","normal");
+          $('li[anchor-to="'+$(this).attr("menu-id")+'"]').css("color","black");
+          $('li[anchor-to="'+$(this).attr("menu-id")+'"]').css("font-weight","bold");
+        }
+        if( $(window).scrollTop() < 40 ){
+          $('li[anchor-to]').css("color","white");
+          $('li[anchor-to]').css("font-weight","normal");
+        }
+      });
 		});
 	},
-	adjust: function(){
-		if( $(window).height() > 800){
+
+  quickscroll: function() {
+    $(window).scrollTop($(window).scrollTop()+1);
+    $(window).scrollTop($(window).scrollTop()-1);
+  },
+
+	adjust: function() {
+		if( $(window).height() > 800) {
 			$('#about-me .container').animate({'opacity':'1'},1500);
 		}
 	}
 }
 
 var sendMSG = function(){
-    err = function(arg1){
-		$('#alertmsg').removeClass('hidden');
-		$('#alertmsgContent').html('Fields highlighted in red are required to send me a message!');
-		$('#'+arg1).css("border","solid red 1px")
-		success = false
+  err = function(arg1){
+  	$('#alertmsg').removeClass('hidden');
+  	$('#alertmsgContent').html('Fields highlighted in red are required to send me a message!');
+  	$('#'+arg1).css("border","solid red 1px")
+  	success = false
 	}
 	var name = $('#name').val(),
 	    email = $('#email').val(),
@@ -99,11 +104,7 @@ var sendMSG = function(){
 			email: email,
 			message: message
 		},function(){
-			$('#alertmsgContent').html('Your message has been sent to my inbox! I\'ll get back to you shortly.');
-			$('#name').val('')
-		    $('#email').val('')
-		    $('#phone').val('')
-		    $('textarea#message').val('')
+			$('#contactBox').html('Your message has been sent to my inbox! I\'ll get back to you shortly.');
 		});
 	}
 }
@@ -113,6 +114,7 @@ $(document).ready(function (){
 	portfolio.menu();
 	portfolio.scrolling();
 	portfolio.adjust();
+  portfolio.quickscroll();
 	$('#contactMeButt').on("click",function(){
 		sendMSG();
 	})
