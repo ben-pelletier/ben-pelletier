@@ -92,7 +92,7 @@ var sendMSG = function(){
 	}
 	if(success == true){
 		//alert('Sorry, i will hook up the server side to this SOON')
-		$.getJSON("contact.cfc",{
+		$.getJSON("/assets/contact.cfc",{
 			method: "sendMessage",
 			name: name,
 			phone: phone,
