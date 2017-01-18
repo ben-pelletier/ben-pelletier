@@ -94,9 +94,8 @@ html(lang='en')
         .row
           .one-half.column.value
             .tv
-              video(poster='http://ben-pelletier.com/images/tvapp.jpg', autoplay='', muted='', loop='')
-                source(src='http://ben-pelletier.com/images/tvapp.webm', type='video/webm')
-                source#mp4Source(src='http://ben-pelletier.com/images/tvapp.mp4', type='video/mp4')
+              video(poster='../img/tvapp.jpg', autoplay='', muted='', loop='')
+                source(src='../img/tvapp.webm', type='video/webm')
           .one-half.column.value
             h3 Code 600 TV
             p
@@ -217,7 +216,7 @@ html(lang='en')
                 i.fa.fa-envelope
                 |  ben.epelletier@gmail.com
           .two-thirds.column.value
-            .column.category
+            .column.category#contactBox
               form
                 #alertmsg.row.hidden
                   #alertmsgContent.twelve.columns
