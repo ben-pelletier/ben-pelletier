@@ -13,7 +13,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.(jpg|png)$/,
+        test: /\.(jpg|png|webm)$/,
         loader: "file-loader?name=assets/[name].[hash].[ext]"
       },
       {
@@ -30,28 +30,28 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        loaders: ['html-loader', 'pug-html-loader?exports=false']
+        loaders: ['html-loader?attrs[]=source:src&attrs[]=video:poster&attrs[]=img:src', 'pug-html-loader?exports=false']
       },
       {
-         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-         loader: "url-loader?limit=10000&mimetype=application/font-woff&name=assets/[name].[hash].[ext]"
-       },
-       {
-         test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-         loader: "url-loader?limit=10000&mimetype=application/font-woff&name=assets/[name].[hash].[ext]"
-       },
-       {
-         test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-         loader: "url-loader?limit=10000&mimetype=application/octet-stream&name=assets/[name].[hash].[ext]"
-       },
-       {
-         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-         loader: "file-loader?name=./assets/[name].[hash].[ext]"
-       },
-       {
-         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-         loader: "url-loader?limit=10000&mimetype=image/svg+xml&name=assets/[name].[hash].[ext]"
-       }
+        test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url-loader?limit=10000&mimetype=application/font-woff&name=assets/[name].[hash].[ext]"
+      },
+      {
+        test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url-loader?limit=10000&mimetype=application/font-woff&name=assets/[name].[hash].[ext]"
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url-loader?limit=10000&mimetype=application/octet-stream&name=assets/[name].[hash].[ext]"
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file-loader?name=./assets/[name].[hash].[ext]"
+      },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url-loader?limit=10000&mimetype=image/svg+xml&name=assets/[name].[hash].[ext]"
+      }
     ]
   },
   plugins: [
