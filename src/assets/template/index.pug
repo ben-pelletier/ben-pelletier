@@ -218,7 +218,7 @@ html(lang='en')
                 |  ben.epelletier@gmail.com
           .two-thirds.column.value
             .column.category#contactBox
-              form
+              form(netlify name="contact")
                 #alertmsg.row.hidden
                   #alertmsgContent.twelve.columns
                 .row
@@ -232,7 +232,7 @@ html(lang='en')
                 .row
                   .twelve.columns
                     textarea#message.u-full-width.txtarea(name='message', placeholder='Message')
-                input#contactMeButt(type='button', value='Send Message')
+                input(type='submit', value='Send Message')
     footer
       #footer.section.sub-section.footer
         .container
